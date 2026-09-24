@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Намётка · ремонт и пошив одежды в Твери: цена до визита</title>
-<meta name="description" content="Ателье «Намётка» в Твери: цены и сроки на типовые работы известны до визита. Подшить, ушить, заменить молнию, сшить по меркам. Примерка в цене, срок в квитанции, вещь вернём вовремя.">
+<title>Нитка · ремонт и пошив одежды в Твери: цена до визита</title>
+<meta name="description" content="Ателье «Нитка» в Твери: цены и сроки на типовые работы известны до визита. Подшить, ушить, заменить молнию, сшить по меркам. Примерка в цене, срок в квитанции, вещь вернём вовремя.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ru_RU">
-<meta property="og:site_name" content="Намётка">
-<meta property="og:title" content="Ремонт и пошив одежды в Твери – цена до визита">
+<meta property="og:site_name" content="Нитка">
+<meta property="og:title" content="Сервис ремонта и пошива одежды">
 <meta property="og:description" content="Подшить, ушить, заменить молнию, сшить по меркам. Срок и цену называем по фото до визита, примерка в цене.">
 <meta property="og:url" content="namyotka.ru">
 <meta property="og:image" content="namyotka.ru/assets/og.jpg">
@@ -23,7 +23,7 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Cpath d=%27M7 25 L25 7%27 stroke=%27%2324336e%27 stroke-width=%273.2%27 stroke-linecap=%27round%27/%3E%3Ccircle cx=%2723%27 cy=%279%27 r=%273.4%27 fill=%27none%27 stroke=%27%2324336e%27 stroke-width=%272.2%27/%3E%3C/svg%3E">
 <link rel="stylesheet" href="vibe.css">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"LocalBusiness","name":"Намётка","description":"Ателье: ремонт одежды и пошив по меркам. Цены и сроки на типовые работы известны до визита, примерка в цене, срок в квитанции.","url":"namyotka.ru","image":"namyotka.ru/assets/og.jpg","telephone":"+7 (4822) 000-00-00","openingHours":"пн–сб 10:00–20:00","address":{"@type":"PostalAddress","streetAddress":"ул. Трёхсвятская, 24","addressLocality":"Тверь","addressCountry":"RU"},"priceRange":"от 500 ₽","sameAs":["#otzyvy"]}
+{"@context":"https://schema.org","@type":"LocalBusiness","name":"Нитка","description":"Ателье: ремонт одежды и пошив по меркам. Цены и сроки на типовые работы известны до визита, примерка в цене, срок в квитанции.","url":"namyotka.ru","image":"namyotka.ru/assets/og.jpg","telephone":"+7 (4822) 000-00-00","openingHours":"пн–сб 10:00–20:00","address":{"@type":"PostalAddress","streetAddress":"ул. Трёхсвятская, 24","addressLocality":"Тверь","addressCountry":"RU"},"priceRange":"от 500 ₽","sameAs":["#otzyvy"]}
 </script>
 <style>
   /* ---- тема: шесть цветов, два шрифта --------------------------------- */
@@ -216,6 +216,16 @@
     .rcpt__foot { display: none; }
   }
   @media (max-width: 600px) and (max-height: 760px) { .kv__rep p { display: none; } .kv__head .v-display--md { font-size: var(--v-t-lg); } }
+  /* ---- без анимаций (Windows «Показывать анимацию» выкл., iOS «Уменьшение движения»):
+     движок показывает все шаги сразу – ставим их столбиком, а не друг на друга ---- */
+  @media (prefers-reduced-motion: reduce) {
+    #kvitanciya { height: auto; }
+    #kvitanciya [data-v-stage] { position: relative; height: auto; min-height: 100svh; }
+    .kv, .kv__grid { height: auto; min-height: 100svh; }
+    .kv__reps { min-height: 0; display: grid; gap: var(--v-6); align-self: start; }
+    .kv__rep { position: static; }
+    .rcpt { --p: 1 !important; } /* квитанция заполнена целиком */
+  }
 
   /* ---- акт 4 · типовые работы: строки со сроком-штампом и ценой --------------- */
   .prices { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, .65fr); gap: var(--v-9); align-items: start; }
@@ -375,7 +385,7 @@
   <span data-v-progress></span>
 
   <header class="bar">
-    <a class="bar__mark" href="#top"><i aria-hidden="true"></i>Намётка</a>
+    <a class="bar__mark" href="#top"><i aria-hidden="true"></i>Нитка</a>
     <nav class="bar__right" aria-label="Быстрые ссылки">
       <a class="bar__tel" href="tel:+7 (4822) 000-00-00">+7 (4822) 000-00-00</a>
       <a class="v-btn" href="#zapis" target="_blank" rel="noopener">Узнать срок и цену</a>
@@ -398,7 +408,7 @@
         <div class="v-layer" data-v-parallax="-0.2" style="pointer-events: none">
           <aside class="tag" aria-label="Так выглядит наша квитанция">
             <div class="tag__paper">
-              <div class="tag__head"><span>Ателье «Намётка»</span><b>Квитанция</b></div>
+              <div class="tag__head"><span>Ателье «Нитка»</span><b>Квитанция</b></div>
               <dl class="tag__rows">
                 <div><dt>Принято</dt><dd class="is-empty">–</dd></div>
                 <div><dt>Работа</dt><dd class="is-empty">–</dd></div>
@@ -410,8 +420,8 @@
         </div>
 
         <div class="v-copy v-copy--lead hero__copy" data-v-cue="0 0.86 0 0.12">
-          <span class="v-label hero__label">Ателье «Намётка»</span>
-          <h1 class="v-display v-display--xl" data-v-kinetic="lines">Ремонт и пошив одежды в Твери – цена до визита</h1>
+          <span class="v-label hero__label">Ателье «Нитка»</span>
+          <h1 class="v-display v-display--xl" data-v-kinetic="lines">Сервис ремонта и пошива одежды</h1>
           <p class="v-lede">Подшить, ушить, заменить молнию, сшить по меркам. Срок и цену называем по фото до визита, примерка в цене.</p>
           <div class="hero__cta">
             <a class="v-btn" href="#zapis" target="_blank" rel="noopener">Узнать срок и цену</a>
@@ -461,7 +471,7 @@
               <span class="rcpt__guide" aria-hidden="true"></span>
               <span class="rcpt__seam" aria-hidden="true"></span>
               <span class="rcpt__needle" aria-hidden="true"></span>
-              <div class="rcpt__head"><b>Квитанция</b><span>Ателье «Намётка»</span></div>
+              <div class="rcpt__head"><b>Квитанция</b><span>Ателье «Нитка»</span></div>
               <dl class="rcpt__rows">
                 <div class="rcpt__row" style="--a: .04"><dt>Принято</dt><dd>Пальто шерстяное, тёмно-синее<small>Бирка с номером – на вещи, номер – в квитанции</small></dd></div>
                 <div class="rcpt__row" style="--a: .22"><dt>Работа</dt><dd>Укоротить рукава на 3 см по фабричному шву<small>Длину сняли на примерке, манжеты сохраняем</small></dd></div>
@@ -678,11 +688,11 @@
             <div class="close__meta" data-v-cue="0.1">
               <span><b>Часы работы</b>пн–сб 10:00–20:00</span>
               <span><b>Адрес</b>ул. Трёхсвятская, 24, Тверь</span>
-              <span><b>Как добраться</b><a href="#otzyvy" target="_blank" rel="noopener">Намётка на Яндекс.Картах</a></span>
+              <span><b>Как добраться</b><a href="#otzyvy" target="_blank" rel="noopener">Нитка на Яндекс.Картах</a></span>
             </div>
           </div>
           <footer class="foot">
-            <span>Ателье «Намётка» · Тверь</span>
+            <span>Ателье «Нитка» · Тверь</span>
             <span data-slot-optional>ИП Крылова О. Н. · ИНН 690000000000</span>
             <span class="foot__more">Подшить, ушить, заменить молнию, сшить по меркам – срок и цена в квитанции</span>
           </footer>
